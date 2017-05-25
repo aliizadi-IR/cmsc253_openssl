@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MP_Openssl" />
+		<Option pch_mode="2" />
+		<Option compiler="cygwin" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/MP_Openssl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-ansi" />
+					<Add option="-g" />
+					<Add option="-std=gnu++0x -fpermissive" />
+					<Add directory="C:/OpenSSL-Win32/bin" />
+					<Add directory="C:/OpenSSL-Win32/include" />
+					<Add directory="C:/OpenSSL-Win32/lib" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/MP_Openssl" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="cygwin" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Linker>
+			<Add library="C:/OpenSSL-Win32/lib/libcrypto.lib" />
+			<Add library="C:/OpenSSL-Win32/lib/openssl.lib" />
+			<Add directory="C:/OpenSSL-Win32/lib" />
+		</Linker>
+		<Unit filename="include/Hashing.h" />
+		<Unit filename="include/RSA.h" />
+		<Unit filename="include/SymmetricEncryption.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Hashing.cpp" />
+		<Unit filename="src/RSA.cpp" />
+		<Unit filename="src/SymmetricEncryption.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
